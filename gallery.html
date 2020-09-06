@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kolkata</title>
+
+<meta charset="utf-8">
+<meta name="description" content="CSS Training">
+<meta name="keyword" content="CSS, Stylesheet">
+<meta name="author" cantent="Gitabitan Pati">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+font-family: Times,serif;
+font-size: 15px;
+}
+
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+  background: linear-gradient(to bottom left, #ffedbc 0%, #ffffff 100%);
+  }
+ @media screen and (max-width: 600px) {
+  .smallheader{
+    width: 100%;
+  }
+}
+.smallheader{
+  height:15%;
+    width:100%;
+    /*border:1px solid black;*/
+    background: white;
+    position: fixed;
+    z-index: 10;
+
+  }
+     @media screen and (max-width: 600px) {
+  .logo_image{
+    width: 100%;
+  }
+}
+  .logo_image{
+    height:70%;
+    width:20%;
+      float: left;
+    transform: translate(10px,10px);
+  }
+
+@media screen and (max-width: 600px) {
+  .navigation{
+    width: 100%;
+  }
+}
+.navigation{
+  left:0px;
+  right: 0px;
+  margin:9px;
+  display: inline-flex;
+  color: white;
+}
+a{
+color:#7b0e0e;
+text-decoration:none;
+}
+  @media screen and (max-width: 600px) {
+  #demo {
+    width: 100%;
+  }
+}
+
+#demo{
+  transform: translate(90%,0%);
+  color: gray;
+}
+@media screen and (max-width: 600px) {
+.smallheader{
+  width: 50%;
+  }
+}
+.smallheader{
+  height:15%;
+    width:100%;
+   /* border:1px solid black;*/
+    background:white;
+    position: relative;
+    z-index: 10;
+  /*  background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);*/
+  }
+ .logo_image{
+    height:70%;
+    width:26%;
+    margin-top: 12px;
+    margin-left: 2px;
+  } 
+@media screen and (max-width: 600px) {
+  .navigation{
+    width: 50%;
+  }
+}
+.navigation{
+  left:0px;
+  right: 0px;
+  margin:22px;
+  display: inline-flex;
+  color:white;
+}
+a{
+  color:#7b0e0e;
+  text-decoration:none;
+  margin-top: -9px;
+}
+._btn{
+  margin-left: 40px;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.carouseldiv{
+  height:278px !important;
+  width:611px !important;
+}
+@media screen and (max-width:600px) {
+  ._kolkata{
+    width:60%;
+  }
+}
+._kolkata{
+  padding: 10px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+._decoration{
+  padding-top: 6px;
+}
+@media screen and (max-width:600px) {
+  p{
+    font-size: 8px;
+    display: block;
+  }
+}
+._kolkata p:hover{
+  transform:rotate(0deg) scale(1.03);
+  transition: 2s;
+}
+.pp{
+
+    margin-right: 227px;
+    margin-left: 194px
+}
+
+
+.icon-bar {
+  width: 108px;
+  position: fixed;
+  bottom: 0%;
+  -webkit-transform: translateY(10%);
+  -ms-transform: translateY(10%);
+  transform: translateX(1100%);
+z-index: 100;
+}
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+   transform:rotate(90deg) scale(1.04);
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.main-wrapper {
+  padding: 50px 0;
+}
+
+img {
+  cursor: pointer;
+}
+
+.img-wrapper {
+  margin: 10px 0;
+  transition: left 1s linear;
+}
+
+.img-wrapper .img-item{
+  overflow: hidden;
+}
+
+.img-wrapper .img-item img{
+  transition: all ease-in 0.1s;
+}
+
+.img-wrapper .img-item img:hover{
+  transform: scale(1.1);
+}
+
+.gallary-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000c7;
+  display: none;
+  cursor: pointer;
+}
+
+.gallary-bg-block {
+  display: block;
+}
+
+.gallary-bg-block .img-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallary-bg .img-item > img {
+  transition: all ease-in 0.5s;
+  transform: scale(0);
+}
+
+.gallary-bg-block .img-item > img {
+  transform: scale(1);
+  padding: 5px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+  z-index: 999999;
+}
+
+.img-magnifier-glass:after {
+    content: url(https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_line-512.png);
+    height: 50px;
+    width: 46px;
+    position: absolute;
+    transform: scale(0.3) rotate(61deg);
+    right: -30px;
+    bottom: 22px;
+}
+
+/*footer*/
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+/*************footer End*****************/
+</style>
+</head>
+<header>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark _nav bg-dark">
+  <a class="navbar-brand" href="#"><strong>KOLKATA</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <ul class="navbar-nav">
+  <li class="nav-item active">
+  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="TouristSpot.html">Tourist's Spot</a>
+          <a class="dropdown-item" href="#">Amusement Parks</a>
+          <a class="dropdown-item" href="#">Religious Places</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gallery.html">Gallary</a>
+      </li>
+    </ul><h6 id="demo"></h6>
+</nav>
+<br>
+<br>
+<div class="smallheader">
+  <img class="logo_image" src="kolkata_logo.png" alt="logo">
+ 
+<div class="navigation" type="text">
+  <li><a href="#">AboutUs</a></li>
+  <li><a href="#">Offers</a></li>
+  <li><a href="#">Contact</a></li>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary _btn" data-toggle="modal" data-target="#staticBackdrop">
+  Our Offers
+</button>
+</div></div></nav></div></header>
+<br>
+<br>
+<div>
+  <div class="new1">
+<div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook">facebook<i class="fa fa-facebook"></i></a> 
+  <a href="http://tweeter.com/" class="twitter">twitter<i class="fa fa-twitter"></i></a> 
+  <a href="http://google.com/" class="google">google<i class="fa fa-google"></i></a> 
+  <a href="http://lindein.com/" class="linkedin">linkedin<i class="fa fa-linkedin"></i></a>
+  <a href="http://youtube.com/" class="youtube">youtube<i class="fa fa-youtube"></i></a> 
+</div>
+<br><br>
+  <marquee behavior="scroll" direction="left"><h3>Gallery</h3></marquee> 
+<div>
+    <div class="container">
+      <div class="main-wrapper">
+        <div class="row">
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f11.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f12.jpg" alt="" class="img-fluid">
+              </div>
+            </div>              
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f13.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f14.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f15.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f3.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f1.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f3.jpg" alt="" class="img-fluid">
+              </div>
+            </div>              
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="f8.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img  src="f6.jpg" alt="" class="img-fluid">
+              </div>
+            </div>              
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img  src="i10.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-center">
+            <div class="img-wrapper">
+              <div class="img-item text-center">
+                <img src="i9.jpg" alt="" class="img-fluid">
+              </div>
+            </div>              
+          </div>                       
+        </div>
+      </div>
+    </div>
+            
+    <div class="gallary-bg">  </div>        
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+</div>
+  <!-- footer -->
+<footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9876543210 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>mail@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                               
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+  </body>
+</html>
