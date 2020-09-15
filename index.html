@@ -19,7 +19,6 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.theme.default.min.css">
 
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 <style type="text/css">
 *{
 margin:0;
@@ -35,7 +34,7 @@ html{
 body{
   height: 100%;
   width: 100%;
-  background-color: #f4e8db;
+  background-color: #eacda3;
 	}
 @media screen and (max-width: 600px) {
  #demo{
@@ -63,11 +62,17 @@ body{
     z-index: 10;
   /*  background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);*/
   }
+  @media screen and (max-width: 600px) {
+  .logo_image{
+    width: 30%;
+    margin-left: -376px;
+  }
+}
  .logo_image{
     height:70%;
     width:26%;
     margin-top: 12px;
-    margin-left: 2px;
+    transform: translate(493px,0px);
   } 
 @media screen and (max-width: 600px) {
   .navigation{
@@ -104,20 +109,25 @@ a{
 }
 .carouseldiv{
   height:278px !important;
-  width:611px !important;
+  width:430px !important;
 }
 @media screen and (max-width:600px) {
   ._kolkata{
-    width:60%;
+    width:30%;
+    transform: translate(-73px, -15px);
   }
 }
 ._kolkata{
   padding: 10px;
   padding-bottom: 5px;
   border-radius: 10px;
+  margin-left: 145px;
 }
 ._decoration{
   padding-top: 6px;
+}
+._decor{
+  width: 360px !important;
 }
 @media screen and (max-width:600px) {
   p{
@@ -461,6 +471,7 @@ z-index: 100;
   font-size: 14px;
   color: #878787;
 }
+
 </style>
 </head>
 
@@ -488,23 +499,21 @@ z-index: 100;
       <li class="nav-item">
         <a class="nav-link" href="gallery.html">Gallary</a>
       </li>
-    </ul><h6 id="demo"></h6>
+      <li class="nav-item">
+        <a class="nav-link" href="form.html">Contact</a>
+      </li>
+    </ul>
+    <h6 id="demo"></h6>
 </nav>
 <br>
 <br>
 <div class="smallheader">
   <img class="logo_image" src="kolkata_logo.png" alt="logo">
  
-<div class="navigation" type="text">
+<!-- div class="navigation" type="text">
   <li><a href="#">AboutUs</a></li>
 <li><a href="form.html">Contact</a></li>
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary _btn" data-toggle="modal" data-target="#staticBackdrop">
-  Our Offers
-</button>
-</div></div></nav></div></header>
+</div> --></div></nav></div></header>
 
 <body>
 <!-- carousal -->
@@ -568,7 +577,7 @@ z-index: 100;
 <body>
 <div class="container-fluid _decoration">
 <div class="row _decoration1">
-  <div class="col col-lg-5 col-sm-12 _kolkata" style="background: linear-gradient(to top right, #d87b18  0%, #da9f60  100%);">
+  <div class="col col-lg-5 col-sm-12 _kolkata" style="background: linear-gradient(to top right, #eacda3  0%, #d6ae7b  100%);">
     <center> <h1>History</h1></center>
     <p>Kolkata (spelled Calcutta before 1 January 2001) is the capital city of the Indian state of West Bengal.
   It is the second largest city in India after Mumbai.It is on the east bank of the River Hooghly.
@@ -577,12 +586,12 @@ z-index: 100;
   Kolkata served as the capital of India during the British Raj until 1911.
   Kolkata was once the center of industry and education.
   However, it has witnessed political violence and economic problems since 1954.
-  Since 2000, Kolkata has grown due to economic growth.</p>
+  Since 2000, Kolkata has grown due to economic growth. <a href="https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata">...Read More</a></p>
   </div>
-  <div class="column _decoration1" style="background-color:#da9f60;">
+  <div class="column _decor" style="background-color:#d6ae7b;">
   <div class="card h-70">
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-  <div class="carousel-inner">
+  <div class="carousel-inner ch">
     <div class="carousel-item active">
       <img src="old1.jpg" class="d-block w-100 carouseldiv" alt="...">
     </div>
@@ -645,7 +654,7 @@ z-index: 100;
    with Darjeeling Himalayan hill region and Duars showing particularly different socio-cultural aspects.
   West Bengal's capital Kolkata as the former capital of India—was the birthplace of modern Indian literary and artistic thought,
    and is referred to as the "cultural [or literary] capital of India".The presence of paras, which are cluster of neighbourhoods
-   that possess a strong sense of community, is characteristic of West Bengal.
+   that possess a strong sense of community, is characteristic of West Bengal.<a href="https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata">...Read More</a>
   </center></div><hr>
     </div>
     </div>
@@ -745,8 +754,6 @@ z-index: 100;
             <!--END OF TESTIMONIAL 12 -->
           </div>
         </div>
-      </div>
-      </div>
     </section>
     <!-- END OF TESTIMONIALS -->
  <!-- footer -->
@@ -854,34 +861,10 @@ z-index: 100;
             </div>
         </div>
     </footer>
-    <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Our Offers</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h3>Full Package</h3>
-       <pre> 
-Tour Packages    | 6 Days  | 5 Nights |Rs. 27 999.00  <a href="#" role="button" class="btn btn-dark popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">Get</a><br>
-Partial Package  | 7 Days  | 6 Nights |Rs. 31 999.00  <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">Get</a><br>
-partial package  | 7 Days  | 6 Nights |Rs. 25 999.00  <a href="#" role="button" class="btn btn-dark popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">Get</a>
-</pre>
-     
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
+    
 </body>
 <!-- owl --><script>
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
             "use strict";
             //  TESTIMONIALS CAROUSEL HOOK
             $('#customers-testimonials').owlCarousel({
@@ -909,7 +892,7 @@ jQuery(document).ready(function($) {
 
 </script>
 <script>
-var d = new Date();
+var d =  Date();
 document.getElementById("demo").innerHTML = d;
 </script>
 </html>
