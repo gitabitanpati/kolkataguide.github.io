@@ -15,8 +15,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<script src="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.theme.default.min.css">
 
-
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 <style type="text/css">
 *{
 margin:0;
@@ -415,44 +418,122 @@ h2{
 <!-- Button trigger modal -->
 </nav></div></header>
 <body>
-  <br><br><br>
- <div class="container">
-  <h1>Register with us</h1>
-  <br>
-  <form  onsubmit="return validateform()">
-    <div class="form-group col-12">
-      Name:<input type="text" class="form-control" id="name_id"><br>
-      <div id="error1"></div>
-      Password:<input type="password" class="form-control" id="pass_id">
-      <div id="error2"></div>
-      <input type="submit" value="submit">
-        <a href="index.html" class="btn btn-outline-secondary">Close</a><br>
-    </div>
-    <br><br>
-  </form>
+      <div class="container">
+        <form id="form" class="form">
+            <h2>Register With Us</h2>
+      <input type="text" id="username" placeholder="Enter Username">
+            <div class="form-control">
+                <small>Error Message</small>
+            </div>
+            <input type="text" id="email" placeholder="Enter email">
+            <div class="form-control">
+                <small>Error Message</small>
+            </div>
+            <input type="password" id="password" placeholder="Enter password">
+            <div class="form-control">
+                <small>Error Message</small>
+            </div>
+            <input type="password" id="password2" placeholder="Enter password again">
+            <div class="form-control">
+                <small>Error Message</small>
+            </div>
+            <button><a href="index.html">Submit</button>
+        </form>
+    </div></div></body>
 
 
+
+<div>
+  <div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook">facebook<i class="fa fa-facebook"></i></a> 
+  <a href="http://tweeter.com/" class="twitter">twitter<i class="fa fa-twitter"></i></a> 
+  <a href="http://google.com/" class="google">google<i class="fa fa-google"></i></a> 
+  <a href="http://lindein.com/" class="linkedin">linkedin<i class="fa fa-linkedin"></i></a>
+  <a href="http://youtube.com/" class="youtube">youtube<i class="fa fa-youtube"></i></a> 
+</div>
 
 
 <script>
 var d = new Date();
 document.getElementById("demo").innerHTML = d;
-
-
+</script>
 <script>
-  function validateform(){
-    var name = document.getElementById('name_id').value;
-    var password = document.getElementById('pass_id').value;
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
 
-    if(name==null || name==""){
-      alert("Name cant be blank");
-      return false;
+//Show input error messages
+function showError(input, message) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    small.innerText = message;
+}
+
+//show success colour
+function showSucces(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+}
+
+//check email is valid
+function checkEmail(input) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(re.test(input.value.trim())) {
+        showSucces(input)
+    }else {
+        showError(input,'Email is not invalid');
     }
-    else if(password.length<5)
-    {
-      alert("password must be atleast 5 characters");
-      return false;
+}
+
+
+//checkRequired fields
+function checkRequired(inputArr) {
+    inputArr.forEach(function(input){
+        if(input.value.trim() === ''){
+            showError(input,`${getFieldName(input)} is required`)
+        }else {
+            showSucces(input);
+        }
+    });
+}
+
+
+//check input Length
+function checkLength(input, min ,max) {
+    if(input.value.length < min) {
+        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+    }else if(input.value.length > max) {
+        showError(input, `${getFieldName(input)} must be les than ${max} characters`);
+    }else {
+        showSucces(input);
     }
-  }
+}
+
+//get FieldName
+function getFieldName(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+// check passwords match
+function checkPasswordMatch(input1, input2) {
+    if(input1.value !== input2.value) {
+        showError(input2, 'Passwords do not match');
+    }
+}
+
+
+//Event Listeners
+form.addEventListener('submit',function(e) {
+    e.preventDefault();
+
+    checkRequired([username, email, password, password2]);
+    checkLength(username,3,15);
+    checkLength(password,6,25);
+    checkEmail(email);
+    checkPasswordMatch(password, password2);
+});
 </script>
 </html>
