@@ -36,7 +36,7 @@ body{
   height: 100%;
   width: 100%;
   background-color: #f4e8db;
-	}
+  }
 @media screen and (max-width: 600px) {
  #demo{
    width: 50%;
@@ -125,6 +125,11 @@ a{
     display: block;
   }
 }
+
+.ba{
+  background-image: url(f3.jpg);
+}
+
 /*icon*/
 .icon-bar {
   position: fixed;
@@ -417,123 +422,136 @@ h2{
 
 <!-- Button trigger modal -->
 </nav></div></header>
-<body>
-      <div class="container">
-        <form id="form" class="form">
-            <h2>Register With Us</h2>
-      <input type="text" id="username" placeholder="Enter Username">
-            <div class="form-control">
-                <small>Error Message</small>
-            </div>
-            <input type="text" id="email" placeholder="Enter email">
-            <div class="form-control">
-                <small>Error Message</small>
-            </div>
-            <input type="password" id="password" placeholder="Enter password">
-            <div class="form-control">
-                <small>Error Message</small>
-            </div>
-            <input type="password" id="password2" placeholder="Enter password again">
-            <div class="form-control">
-                <small>Error Message</small>
-            </div>
-            <button><a href="index.html">Submit</button>
-        </form>
-    </div></div></body>
+<body><br>
+  <br>
+  <div class="container ba">
+   <br> <h1><center><strong>Feel Free to Contact Us</strong></center></h1><br>
+    <div class="row">
+     <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+                <div class="col">
+                  Username: <input type="text" class="form-control" name="fname">
+                    <div id="js">
+                    </div>
+                </div>
+                <div class="col">
+                  Email_id: <input type="text" class="form-control" name="femail">
+                    <div id="eid">
+                    </div>
+                </div>
+
+                <div class="col">
+                  Phone_Number: <input type="text" class="form-control" name="fphno">
+                    <div id="phno">
+                    </div>
+                </div>
+                <!-- <div class="col">
+                  Subject: <input type="text" class="form-control" name="fsubject">
+                    <div id="sub">
+                    </div>
+                </div> -->
+                <div class="col">
+                  Massages: <textarea type="text" class="form-control" id="message" cols="30" rows="4" name="ftxtarea"></textarea>
+                    <div id="area">
+                    </div>
+                </div>
+              <input type="submit" value="Submit" class="submit mit">
+               <a href="index.html" class="btn btn-outline-dark">Close</a><br>
+            </form></div></div>
+          </body>
 
 
-
-<div>
-  <div class="icon-bar">
-  <a href="https://www.facebook.com/" class="facebook">facebook<i class="fa fa-facebook"></i></a> 
-  <a href="http://tweeter.com/" class="twitter">twitter<i class="fa fa-twitter"></i></a> 
-  <a href="http://google.com/" class="google">google<i class="fa fa-google"></i></a> 
-  <a href="http://lindein.com/" class="linkedin">linkedin<i class="fa fa-linkedin"></i></a>
-  <a href="http://youtube.com/" class="youtube">youtube<i class="fa fa-youtube"></i></a> 
-</div>
 
 
 <script>
 var d = new Date();
 document.getElementById("demo").innerHTML = d;
 </script>
+
 <script>
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
-
-//Show input error messages
-function showError(input, message) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control error';
-    const small = formControl.querySelector('small');
-    small.innerText = message;
-}
-
-//show success colour
-function showSucces(input) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control success';
-}
-
-//check email is valid
-function checkEmail(input) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(re.test(input.value.trim())) {
-        showSucces(input)
-    }else {
-        showError(input,'Email is not invalid');
-    }
-}
-
-
-//checkRequired fields
-function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
-        if(input.value.trim() === ''){
-            showError(input,`${getFieldName(input)} is required`)
-        }else {
-            showSucces(input);
+  function validateForm() {
+    var namea = document.forms["myForm"]["fname"].value;
+    var emailid = document.forms["myForm"]["femail"].value;
+     var phno = document.forms["myForm"]["fphno"].value;
+    // var subjecta = document.forms["myForm"]["fsubject"].value;
+    var messagea = document.forms["myForm"]["ftxtarea"].value;
+        if (namea==null || namea=="") {
+          document.getElementById('js').innerHTML = "<div class='error_color'> **Name must be filled out</div> ";
+          return false;
         }
-    });
+      //   if ((namea.length <= 4) || (namea.length >= 20) ){  
+      //   document.getElementById('js').innerHTML = " <div class='error_color'>**Enter minimum 5 letters....</div>";
+      //   return false;  
+      // }
+      if (!isNaN(namea)){  
+          document.getElementById('js').innerHTML = "<div class='error_color'> **only letters are allowed..</div>.";
+          return false;  
+      }
+else{
+ document.getElementById('js').innerHTML = "<div class='error_color'> **Successfull..</div>."; 
 }
 
-
-//check input Length
-function checkLength(input, min ,max) {
-    if(input.value.length < min) {
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be les than ${max} characters`);
-    }else {
-        showSucces(input);
+      if (emailid==null || emailid=="" ){  
+      document.getElementById('eid').innerHTML = " **<div class='error_color'>Email cant be blank....Please Enter your email id.....</div>";
+      return false;  
     }
-}
-
-//get FieldName
-function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-// check passwords match
-function checkPasswordMatch(input1, input2) {
-    if(input1.value !== input2.value) {
-        showError(input2, 'Passwords do not match');
+    if (emailid.indexOf('@') <= 0){  
+      document.getElementById('eid').innerHTML = " **<div class='error_color'>@invalid email-id...Please Enter valid email-id....</div>";
+      return false;  
     }
+    if ((emailid.charAt(emailid.length-4) != '.') && (emailid.charAt(emailid.length-3) != '.')){  
+      document.getElementById('eid').innerHTML = " **<div class='error_color'>.invalid position....</div>";
+      return false;  
+    }
+    else{
+      document.getElementById('eid').innerHTML = " **<div class='error_color'>**Successfull..</div>";
+    }
+
+ if (phno==null || phno=="" ){  
+      document.getElementById('phno').innerHTML = " **<div class='error_color'>Phone Number cant be blank....whats your subjects....</div>";
+      return false;  
+    }
+     if (isNaN(phno)){  
+          document.getElementById('phno').innerHTML = "<div class='error_color'> **only numbers are allowed..</div>.";
+          return false;  
+      }
+    if ( phno.length <= 10 ){  
+      document.getElementById('phno').innerHTML = " **<div class='error_color'>Minimum 10 numbers must be present....</div>";
+      return false;  
+    }
+
+else{
+   document.getElementById('phno').innerHTML = " **<div class='error_color'>**Successfull..</div>";
 }
 
 
-//Event Listeners
-form.addEventListener('submit',function(e) {
-    e.preventDefault();
+    // if (subjecta==null || subjecta=="" ){  
+    //   document.getElementById('sub').innerHTML = " **<div class='error_color'>Subjects cant be blank....whats your subjects....</div>";
+    //   return false;  
+    // }
+    // if ( subjecta.length <= 10 ){  
+    //   document.getElementById('sub').innerHTML = " **<div class='error_color'>Minimum 10 words must be important....</div>";
+    //   return false;  
+    // }
+    // else{
+    //   document.getElementById('sub').innerHTML = " **<div class='error_color'>**Successfull..</div>"; 
+    // }
 
-    checkRequired([username, email, password, password2]);
-    checkLength(username,3,15);
-    checkLength(password,6,25);
-    checkEmail(email);
-    checkPasswordMatch(password, password2);
-});
+
+    if (messagea==null || messagea=="" ){  
+      document.getElementById('area').innerHTML = " **<div class='error_color'>Message cant be blank....please enter some comments....</div>";
+      return false;  
+    }
+    if (messagea.length <= 10 || messagea.length > 100 ){  
+      document.getElementById('area').innerHTML = " **<div class='error_color'>Please Enter More Than 25 letters and Less than 100  letters..</div> ";
+      return false;  
+    }
+else{
+   document.getElementById('area').innerHTML = " **<div class='error_color'>**Successfull..</div>";
+}
+
+    alert("Form Submitted Successfully!");
+      return true;
+  }
 </script>
+
 </html>
