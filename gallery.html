@@ -31,34 +31,34 @@ html{
 }
 body{
   height: 100%;
-  background: linear-gradient(to bottom left, #ffedbc 0%, #ffffff 100%);
+  /*background: linear-gradient(to bottom left, #ffedbc 0%, #ffffff 100%);*/
   }
- @media screen and (max-width: 600px) {
-  .smallheader{
-    width: 100%;
+@media screen and (max-width: 600px) {
+.smallheader{
+  width: 50%;
   }
 }
 .smallheader{
   height:15%;
     width:100%;
-    /*border:1px solid black;*/
-    background: white;
-    position: fixed;
+   /* border:1px solid black;*/
+    background:white;
+    position: relative;
     z-index: 10;
-
+  /*  background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);*/
   }
-     @media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
   .logo_image{
-    width: 100%;
+    width: 30%;
+    margin-left: -376px;
   }
 }
-  .logo_image{
+ .logo_image{
     height:70%;
-    width:20%;
-      float: left;
-    transform: translate(10px,10px);
-  }
-
+    width:26%;
+    margin-top: 12px;
+    transform: translate(153px,0px);
+  } 
 @media screen and (max-width: 600px) {
   .navigation{
     width: 100%;
@@ -474,7 +474,7 @@ ul {
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
   <ul class="navbar-nav">
   <li class="nav-item active">
-  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
   </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -489,25 +489,21 @@ ul {
       <li class="nav-item">
         <a class="nav-link" href="gallery.html">Gallary</a>
       </li>
-    </ul><h6 id="demo"></h6>
+      <li class="nav-item">
+        <a class="nav-link" href="form.html">Contact</a>
+      </li>
+    </ul>
+    <h6 id="demo"></h6>
 </nav>
 <br>
 <br>
 <div class="smallheader">
   <img class="logo_image" src="kolkata_logo.png" alt="logo">
  
-<div class="navigation" type="text">
+<!-- div class="navigation" type="text">
   <li><a href="#">AboutUs</a></li>
-  <li><a href="#">Offers</a></li>
-  <li><a href="#">Contact</a></li>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary _btn" data-toggle="modal" data-target="#staticBackdrop">
-  Our Offers
-</button>
-</div></div></nav></div></header>
-<br>
-<br>
+<li><a href="form.html">Contact</a></li>
+</div> --></div></nav></div></header>
 <div>
   <div class="new1">
 <div class="icon-bar">
@@ -517,9 +513,10 @@ ul {
   <a href="http://lindein.com/" class="linkedin">linkedin<i class="fa fa-linkedin"></i></a>
   <a href="http://youtube.com/" class="youtube">youtube<i class="fa fa-youtube"></i></a> 
 </div>
-<br><br>
+<br><!-- <br>
   <marquee behavior="scroll" direction="left"><h3>Gallery</h3></marquee> 
-<div>
+<div> -->
+  <center><h1>Photos</h1></center>
     <div class="container">
       <div class="main-wrapper">
         <div class="row">
@@ -621,6 +618,16 @@ ul {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
 </div>
+<center><h1>videos</h1></center>
+<div class="container">
+  <div class="row">
+    <div class="col">
+<iframe src="https://www.youtube.com/embed/668nUCeBHyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/668nUCeBHyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/668nUCeBHyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    </div></div></div>
   <!-- footer -->
 <footer class="footer-section">
         <div class="container">
